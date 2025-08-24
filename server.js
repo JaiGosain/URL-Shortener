@@ -57,7 +57,7 @@ app.get("/:code", async (req, res) => {
 });
 
 // Catch-all route for frontend (for any routes not API)
-app.get("*", (req, res) => {
+app.get("/{*splat}", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
